@@ -29,5 +29,5 @@ USE_ANY_RESOURCE_ID = getenv("USE_ANY_RESOURCE_ID") == "True"
 RESOURCE_URL = f"{BOOKING_API_BASE}{RESOURCE_URL_PATH}" if RESOURCE_URL_PATH else None
 
 # Booking time slots (in order of priority)
-BOOKING_TIMES_CSV = getenv("BOOKING_TIMES") or "13:00:00-19:00:00, 09:00:00-13:00:00, 20:00:00-23:45:00"
+BOOKING_TIMES_CSV = getenv("BOOKING_TIMES") or "14:00:00-19:00:00, 09:00:00-14:00:00"
 BOOKING_TIMES = [{"start": b.split("-")[0].strip(), "end": b.split("-")[1].strip()} for b in BOOKING_TIMES_CSV.split(",")]
