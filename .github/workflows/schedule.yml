@@ -1,7 +1,8 @@
 name: Daily Library Reservation Automation
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '5 22 * * *'
 
 jobs:
   run-script:
